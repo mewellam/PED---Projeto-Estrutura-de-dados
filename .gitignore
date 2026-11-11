@@ -53,3 +53,20 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# VS Code - configurações pessoais
+.vscode/settings.json
+.vscode/launch.json
+
+# Arquivos temporários e logs
+*.log
+*.tmp
+
+# Chaves e variáveis de ambiente
+.env
+.env.*
+!.env.example
+
+# Arquivos do Windows
+Thumbs.db
+Desktop.ini
