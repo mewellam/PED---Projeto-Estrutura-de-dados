@@ -16,28 +16,24 @@
 
 // Estruturas
 
-typedef struct Aresta Aresta;
-typedef struct Vfilme Vfilme;
-typedef struct Grafo Grafo;
-
-struct Aresta {
+typedef struct Aresta {
     int ID_Destino; // ID do filme que a aresta conecta, se ela sai do A e tem ID do B, no B ela tem ID do A
     int semelhanca; // De 1 a 10, igual ao Mapeamento 
     struct Aresta *prox; // proxima aresta do filme em que ela ta, se ela sai do A pro B, seria a proxima aresta do A
-};
+} Aresta;
 
-struct Vfilme{ // Vertice de filme
+typedef struct Vfilme{ // Vertice de filme
   int ID; // Literalmente o ID do filme do TMDb
   char nome[150]; // Nome do filme
   char imagem[100]; // Capa do filme, o TMDb passa a URL
   Aresta *adjListas; // Lista de arestas desse filme
   struct Vfilme *prox; 
-};
+} Vfilme;
 
-struct Grafo {
+typedef struct Grafo {
     int n_filmes; // Quantidade total de filmes (Carregados)
     Vfilme *primeiro_filme; // Primeiro da lista, se perder esse aqui ferrou
-};
+} Grafo;
 
 // Funcoes
 
