@@ -1,0 +1,27 @@
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar C com bibliotecas",
+            "type": "process",
+            "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-lcurl",
+                "-lcjson"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
